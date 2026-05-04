@@ -41,7 +41,7 @@ class OilChangeController extends Controller
             1
         );
 
-        $isDue = $kmDiff >= 5000 || $monthsDiff >= 6;
+        $isDue = $kmDiff > 5000 || $monthsDiff > 6;
 
         return view('result', compact('oilChange', 'isDue', 'kmDiff', 'monthsDiff'));
     }
