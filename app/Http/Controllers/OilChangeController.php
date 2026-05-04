@@ -35,8 +35,11 @@ class OilChangeController extends Controller
 
         $kmDiff = $oilChange->current_odometer - $oilChange->previous_odometer;
 
-        $monthsDiff = Carbon::parse($oilChange->previous_change_date)
-            ->diffInMonths(now());
+        $monthsDiff = round(
+            \Carbon\Carbon::parse($oilChange->previous_change_date)
+                ->floatDiffInMonths(now()),
+            1
+        );
 
         $isDue = $kmDiff >= 5000 || $monthsDiff >= 6;
 

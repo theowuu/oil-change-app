@@ -19,7 +19,7 @@
         <li>Previous Odometer: {{ $oilChange->previous_odometer }}</li>
         <li>Previous Change Date: {{ $oilChange->previous_change_date }}</li>
         <li>KM Driven: {{ $kmDiff }}</li>
-        <li>Months Passed: {{ $monthsDiff }}</li>
+        <li>Months Passed: {{ $monthsDiff }} months</li>
     </ul>
 
     <br>
