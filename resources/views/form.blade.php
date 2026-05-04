@@ -12,14 +12,14 @@
 
         <div>
             <label>Current Odometer</label><br>
-            <input type="number" name="current_odometer" required>
+            <input type="number" name="current_odometer" value="{{ old('current_odometer') }}" required>
         </div>
 
         <br>
 
         <div>
             <label>Previous Odometer</label><br>
-            <input type="number" name="previous_odometer" required>
+            <input type="number" name="previous_odometer" value="{{ old('previous_odometer') }}" required>
         </div>
 
         <br>
